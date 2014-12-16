@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AplicacionColegios</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Login Activity -->
+    <string name="user_name">Usuario</string>
+    <string name="password_text">Contraseña</string>
+    <string name="title_activity_navigation_activity_main">NavigationActivityMain</string>
+    <string name="title_section1">Tareas</string>
+    <string name="title_section2">Notas</string>
+    <string name="title_section3">Mensajes</string>
+    <string name="title_section4">Configuración</string>
+    <string name="title_section5">Ayuda</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_activity_navigation_main">ActivityNavigationMain</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Navigation Drawer-->
+    <array name="nav_drawer_titles">
+        <item>Inicio</item>
+        <item>Tareas</item>
+        <item>Notas</item>
+        <item>Mensajes</item>
+        <item>Configuración</item>
+        <item>Ayuda</item>
+    </array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/task</item>
+        <item>@drawable/grades</item>
+        <item>@drawable/messages</item>
+    </array>
+
+    <string name="desc_list_item_icon">Item Icon</string>
+
+
+</resources>

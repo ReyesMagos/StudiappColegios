@@ -37,6 +37,9 @@ public class TareasFragmentActivity extends Fragment {
         return rootView;
     }
 
+    /**
+     * changes commmit
+     */
     public void initComponents() {
         listView = (ExpandableListView) rootView.findViewById(R.id.expandableListView);
 

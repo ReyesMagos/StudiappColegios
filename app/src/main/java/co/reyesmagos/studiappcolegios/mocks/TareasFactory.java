@@ -40,7 +40,7 @@ public class TareasFactory {
         tarea.setName("Realizar Pág 45 libro Artisitica");
         tarea.setDescription("Pintar con colores primarios el dibujo que allí aparece");
         tarea.setDate("15/01/2015");
-        tarea.setMateria("Artistica");
+        tarea.setMateria("artistica");
 
         listTareas.add(tarea);
 

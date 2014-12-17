@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 
 import co.reyesmagos.studiappcolegios.R;
+import co.reyesmagos.studiappcolegios.dominio.adaptadores.NotaCustomAdapter;
+import co.reyesmagos.studiappcolegios.dominio.adaptadores.factories.impl.FactoryMaterias;
 
 /**
  * Created by oscargallon on 15/12/14.
@@ -24,14 +26,16 @@ public class NotasFragmentActivity extends Fragment {
                 false);
         setHasOptionsMenu(true);
         initComponents();
-
         return rootView;
 
     }
 
-    public  void initComponents(){
-            gridNotas = (GridView) rootView.findViewById(R.id.grid_notas);
-
+    public void initComponents() {
+        gridNotas = (GridView) rootView.findViewById(R.id.grid_notas);
+        FactoryMaterias.getInstance().cretateMaterias(getActivity().getApplicationContext());
+        NotaCustomAdapter notaCustomAdapter = new NotaCustomAdapter(getActivity().getApplicationContext(),
+                FactoryMaterias.getInstance().getMaterias());
+        gridNotas.setAdapter(notaCustomAdapter);
 
 
     }

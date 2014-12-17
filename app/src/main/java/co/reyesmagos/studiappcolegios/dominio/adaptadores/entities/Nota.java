@@ -6,8 +6,9 @@ package co.reyesmagos.studiappcolegios.dominio.adaptadores.entities;
 public class Nota {
 
 
-   private double nota;
+    private double nota;
     private double porcentaje;
+    private String motivo;
 
     public double getNota() {
         return nota;
@@ -23,5 +24,13 @@ public class Nota {
 
     public void setPorcentaje(double porcentaje) {
         this.porcentaje = porcentaje;
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
     }
 }

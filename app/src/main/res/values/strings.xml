@@ -20,8 +20,7 @@
     <string name="title_activity_activity_navigation_main">ActivityNavigationMain</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
-    <!-- Navigation Drawer-->
+    <!-- Navigation Drawer -->
     <array name="nav_drawer_titles">
         <item>Inicio</item>
         <item>Tareas</item>
@@ -30,7 +29,6 @@
         <item>Configuración</item>
         <item>Ayuda</item>
     </array>
-
     <array name="nav_drawer_icons">
         <item>@drawable/task</item>
         <item>@drawable/grades</item>
@@ -48,11 +46,24 @@
     </array>
 
 
-    <!--Grid Layout-->
+    <!-- Grid Layout -->
+
     <string name="espanol_label">Español</string>
     <string name="matematicas_label">Matematicas</string>
     <string name="artistica_label">Artistica</string>
     <string name="ingles_label">Ingles</string>
+    <string name="title_activity_materia">MateriaActivity</string>
+    <string name="tarea1_label">Tarea 1</string>
+    <string name="tarea2_label">Tarea 2</string>
+    <string name="tarea3_label">Tarea 3</string>
+    <string name="tarea4_label">Tarea 4</string>
+    <string name="evaluacion1_label">Evaluacion 1</string>
+    <string name="evaluacion2_label">Evaluacion 2</string>
+
+    <!--Materias Activity-->
+    <string name="nota_final_label">Nota Final</string>
+    <string name="nota_label">Nota</string>
+
 
 
 </resources>

@@ -20,6 +20,10 @@
             android:name=".activities.NavigationActivityMain"
             android:label="@string/title_activity_navigation_activity_main" >
         </activity>
+        <activity
+            android:name=".activities.MateriaActivity"
+            android:label="@string/title_activity_materia" >
+        </activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
 
@@ -69,9 +70,11 @@ public class CustomAdapterNotasMateria extends BaseAdapter {
 
         Nota nota = getItem(position);
         viewHolder.txtMotivo.setText(nota.getMotivo());
-        viewHolder.txtPorcentaje.setText(Double.toString(nota.getPorcentaje()));
+        viewHolder.txtPorcentaje.setText(new DecimalFormat("##.##").format((nota.getPorcentaje()*100))+"%");
+        if(nota.getNota()!=-1)
         viewHolder.txtNota.setText(Double.toString(nota.getNota()));
-
+        else
+            viewHolder.txtNota.setText("N/A");
 
         return convertView;
     }

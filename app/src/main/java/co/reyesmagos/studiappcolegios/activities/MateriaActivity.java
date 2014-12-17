@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 import co.reyesmagos.studiappcolegios.R;
 import co.reyesmagos.studiappcolegios.dominio.adaptadores.factories.impl.FactoryMaterias;
 import co.reyesmagos.studiappcolegios.fragments.adaptadores.CustomAdapterNotasMateria;
@@ -33,8 +35,9 @@ public class MateriaActivity extends Activity {
                 getApplicationContext(), FactoryMaterias.getInstance().getMateriaAMostrar().
                 getListaNotas());
         lvNotas.setAdapter(customAdapterNotasMateria);
-        txtNotaFinal.setText(Double.toString(FactoryMaterias.getInstance().getMateriaAMostrar().
-                getNotaFinal().getNota()));
+        Double notaF=FactoryMaterias.getInstance().getMateriaAMostrar().
+                getNotaFinal().getNota();
+        txtNotaFinal.setText(new DecimalFormat("##.##").format(notaF));
     }
 
 

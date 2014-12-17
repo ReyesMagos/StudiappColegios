@@ -39,12 +39,20 @@
 
     <string name="desc_list_item_icon">Item Icon</string>
 
+
     <!--TareasFragment-->
     <array name="spinner_items">
         <item>Matematicas</item>
         <item>Castellano</item>
         <item>Artistica</item>
     </array>
+
+
+    <!--Grid Layout-->
+    <string name="espanol_label">Español</string>
+    <string name="matematicas_label">Matematicas</string>
+    <string name="artistica_label">Artistica</string>
+    <string name="ingles_label">Ingles</string>
 
 
 </resources>

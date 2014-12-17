@@ -13,6 +13,7 @@ import android.view.MenuItem;
 
 import co.reyesmagos.studiappcolegios.R;
 import co.reyesmagos.studiappcolegios.fragments.NavigationDrawerFragment;
+import co.reyesmagos.studiappcolegios.fragments.NotasFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.NotificacionesFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.TareasFragmentActivity;
 
@@ -62,7 +63,6 @@ public class NavigationActivityMain extends Activity
                 break;
             case 2:
                 fragment = new NotasFragmentActivity();
-
                 break;
             case 3:
                 break;

@@ -40,6 +40,7 @@
 
     <!--TareasFragment-->
     <array name="spinner_items">
+        <item>Todos</item>
         <item>Matematicas</item>
         <item>Castellano</item>
         <item>Artistica</item>

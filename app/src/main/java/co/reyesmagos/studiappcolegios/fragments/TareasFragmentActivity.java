@@ -15,7 +15,11 @@ import android.widget.ExpandableListView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.reyesmagos.studiappcolegios.R;
+import co.reyesmagos.studiappcolegios.dominio.adaptadores.entities.Tareas;
 import co.reyesmagos.studiappcolegios.fragments.adaptadores.CustomAdapterTareas;
 import co.reyesmagos.studiappcolegios.mocks.TareasFactory;
 
@@ -27,6 +31,7 @@ public class TareasFragmentActivity extends Fragment {
     private View rootView;
     private ExpandableListView listView;
     private MenuItem mItem = null;
+    CustomAdapterTareas customAdapterTareas;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,7 +49,7 @@ public class TareasFragmentActivity extends Fragment {
         listView = (ExpandableListView) rootView.findViewById(R.id.expandableListView);
 
         listView.setIndicatorBounds(listView.getRight() - 60, listView.getWidth() - 8);
-        CustomAdapterTareas customAdapterTareas = new CustomAdapterTareas(rootView.getContext(), TareasFactory.getInstance());
+        customAdapterTareas = new CustomAdapterTareas(rootView.getContext(), TareasFactory.getInstance());
         listView.setAdapter(customAdapterTareas);
 
         ActionBar actionBar = getActivity().getActionBar();
@@ -58,7 +63,7 @@ public class TareasFragmentActivity extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(rootView.getContext(),
-                R.array.spinner_items, android.R.layout.simple_spinner_item);
+                R.array.spinner_items, android.R.layout.simple_spinner_dropdown_item);
 
         menuInflater = getActivity().getMenuInflater();
         menuInflater.inflate(R.menu.tarea_menu_spinner, menu);
@@ -72,7 +77,8 @@ public class TareasFragmentActivity extends Fragment {
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
+                    String optionSelected = adapterView.getSelectedItem().toString();
+                    fillOption(optionSelected);
                 }
 
                 @Override
@@ -83,5 +89,33 @@ public class TareasFragmentActivity extends Fragment {
         }
 
         super.onCreateOptionsMenu(menu, menuInflater);
+    }
+
+    public void fillOption(String option){
+        List<Tareas> tareas = TareasFactory.getInstance();
+        List<Tareas> aux = new ArrayList<Tareas>();
+        Tareas tareaAux = null;
+
+        for(int i = 0; i < tareas.size(); i++){
+            tareaAux = tareas.get(i);
+            if(option.equalsIgnoreCase("Matematicas")){
+                if(tareaAux.getMateria().equalsIgnoreCase("Matemáticas")){
+                    aux.add(tareaAux);
+                }
+            }else if (option.equalsIgnoreCase("Castellano")){
+                if(tareaAux.getMateria().equalsIgnoreCase("Castellano")){
+                    aux.add(tareaAux);
+                }
+            }else if (option.equalsIgnoreCase("Artistica")){
+                if(tareaAux.getMateria().equalsIgnoreCase("Artistica")){
+                    aux.add(tareaAux);
+                }
+            }else{
+                aux = tareas;
+            }
+        }
+
+        customAdapterTareas = new CustomAdapterTareas(rootView.getContext(), aux);
+        listView.setAdapter(customAdapterTareas);
     }
 }

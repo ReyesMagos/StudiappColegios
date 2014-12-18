@@ -29,18 +29,44 @@ public class TareasFactory {
         listTareas.add(tarea);
 
         tarea = new Tareas();
+        tarea.setName("Tarea de Algebra");
+        tarea.setDescription("Hacer ejercicios del capitulo 3 LeitHold");
+        tarea.setDate("25/02/2015");
+        tarea.setMateria("Matemáticas");
 
-        tarea.setName("Tarea de espanol");
+        listTareas.add(tarea);
+
+        tarea = new Tareas();
+
+        tarea.setName("Tarea de español");
         tarea.setDescription("Leer el Principito");
         tarea.setDate("12/01/2015");
         tarea.setMateria("Castellano");
 
         listTareas.add(tarea);
 
+        tarea = new Tareas();
+
+        tarea.setName("Lectura");
+        tarea.setDescription("Realizar resumen del texto de la pág 45");
+        tarea.setDate("16/01/2015");
+        tarea.setMateria("Castellano");
+
+        listTareas.add(tarea);
+
+        tarea = new Tareas();
         tarea.setName("Realizar Pág 45 libro Artisitica");
         tarea.setDescription("Pintar con colores primarios el dibujo que allí aparece");
         tarea.setDate("15/01/2015");
         tarea.setMateria("artistica");
+
+        listTareas.add(tarea);
+
+        tarea = new Tareas();
+        tarea.setName("Dibujo libre");
+        tarea.setDescription("Llevar un dibujo libre con vinilos");
+        tarea.setDate("15/01/2015");
+        tarea.setMateria("Artistica");
 
         listTareas.add(tarea);
 

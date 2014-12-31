@@ -13,14 +13,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import co.reyesmagos.studiappcolegios.R;
 import co.reyesmagos.studiappcolegios.dominio.adaptadores.entities.Tareas;
 import co.reyesmagos.studiappcolegios.fragments.adaptadores.CustomAdapterTareas;
+import co.reyesmagos.studiappcolegios.fragments.adaptadores.util.TareaDetail;
 import co.reyesmagos.studiappcolegios.mocks.TareasFactory;
 
 /**
@@ -30,8 +32,9 @@ public class TareasFragmentActivity extends Fragment {
 
     private View rootView;
     private ExpandableListView listView;
+    private ExpandableListView expandableListView2;
     private MenuItem mItem = null;
-    CustomAdapterTareas customAdapterTareas;
+    CustomAdapterTareas customAdapterTareas2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,17 +47,56 @@ public class TareasFragmentActivity extends Fragment {
 
 
     public void initComponents() {
-        listView = (ExpandableListView) rootView.findViewById(R.id.expandableListView);
+        expandableListView2 = (ExpandableListView)rootView.findViewById(R.id.expandableListView2);
 
+        expandableListView2.setIndicatorBounds(expandableListView2.getRight() - 60, expandableListView2.getWidth() - 8);
+        customAdapterTareas2 = new CustomAdapterTareas(rootView.getContext());
 
-        listView.setIndicatorBounds(listView.getRight() - 60, listView.getWidth() - 8);
-        customAdapterTareas = new CustomAdapterTareas(rootView.getContext(), TareasFactory.getInstance());
-        listView.setAdapter(customAdapterTareas);
+        boolean entro = true;
+        for (int i = 0; i < TareasFactory.getInstance().size(); i++) {
+
+            Date date = Calendar.getInstance().getTime();
+            Date aux = TareasFactory.getInstance().get(i).getDate();
+
+            if((aux.getMonth() == date.getMonth()) && (aux.getDay() > date.getDay() && aux.getDay() < date.getDay() + 7)){
+                if(i == 0){
+                   Tareas tareaAux = TareasFactory.getInstance().get(i);
+                    tareaAux.setHeaderTitle("Próximos 7 días");
+                    customAdapterTareas2.addSectionHeaderItem(tareaAux);
+                    customAdapterTareas2.addTareaItem(TareasFactory.getInstance().get(i));
+                }else{
+                    customAdapterTareas2.addTareaItem(TareasFactory.getInstance().get(i));
+                }
+            }else if(entro){
+                Tareas tarAux = TareasFactory.getInstance().get(i);
+                tarAux.setHeaderTitle("Próximas semanas");
+                customAdapterTareas2.addSectionHeaderItem(tarAux);
+                entro = false;
+            }else{
+                customAdapterTareas2.addTareaItem(TareasFactory.getInstance().get(i));
+            }
+
+        }
+        //expandableListView2.addHeaderView(getActivity().getLayoutInflater().inflate(R.layout.separator_tareas_list, null));
+        expandableListView2.setAdapter(customAdapterTareas2);
 
         ActionBar actionBar = getActivity().getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
         actionBar.setDisplayShowTitleEnabled(false);
 
+        expandableListView2.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView expandableListView, View view, int groupPosition, long id) {
+
+                for(int i = 0; i < customAdapterTareas2.getSectionHeader().size(); i++){
+                    if(customAdapterTareas2.getSectionHeader().contains(groupPosition)){
+                        return true;
+                    }else
+                        return false;
+                }
+                return false;
+            }
+        });
 
     }
 
@@ -90,31 +132,58 @@ public class TareasFragmentActivity extends Fragment {
         super.onCreateOptionsMenu(menu, menuInflater);
     }
 
-    public void fillOption(String option){
+    public void fillOption(String option) {
         List<Tareas> tareas = TareasFactory.getInstance();
         List<Tareas> aux = new ArrayList<Tareas>();
         Tareas tareaAux = null;
 
-        for(int i = 0; i < tareas.size(); i++){
+        for (int i = 0; i < tareas.size(); i++) {
             tareaAux = tareas.get(i);
-            if(option.equalsIgnoreCase("Matematicas")){
-                if(tareaAux.getMateria().equalsIgnoreCase("Matemáticas")){
+            if (option.equalsIgnoreCase("Matematicas")) {
+                if (tareaAux.getMateria().equalsIgnoreCase("Matemáticas")) {
                     aux.add(tareaAux);
                 }
-            }else if (option.equalsIgnoreCase("Castellano")){
-                if(tareaAux.getMateria().equalsIgnoreCase("Castellano")){
+            } else if (option.equalsIgnoreCase("Castellano")) {
+                if (tareaAux.getMateria().equalsIgnoreCase("Castellano")) {
                     aux.add(tareaAux);
                 }
-            }else if (option.equalsIgnoreCase("Artistica")){
-                if(tareaAux.getMateria().equalsIgnoreCase("Artistica")){
+            } else if (option.equalsIgnoreCase("Artistica")) {
+                if (tareaAux.getMateria().equalsIgnoreCase("Artistica")) {
                     aux.add(tareaAux);
                 }
-            }else{
+            } else {
                 aux = tareas;
             }
         }
 
-        customAdapterTareas = new CustomAdapterTareas(rootView.getContext(), aux);
-        listView.setAdapter(customAdapterTareas);
+        customAdapterTareas2 = new CustomAdapterTareas(rootView.getContext());
+
+        boolean entro = true;
+        for (int i = 0; i < aux.size(); i++) {
+
+            Date date = Calendar.getInstance().getTime();
+            Date aux1 = aux.get(i).getDate();
+
+            if((aux1.getMonth() == date.getMonth()) && (aux1.getDay() > date.getDay() && aux1.getDay() < date.getDay() + 7)){
+                if(i == 0){
+                    Tareas tareaAux1 = aux.get(i);
+                    tareaAux.setHeaderTitle("Próximos 7 días");
+                    customAdapterTareas2.addSectionHeaderItem(tareaAux);
+                    customAdapterTareas2.addTareaItem(aux.get(i));
+                }else{
+                    customAdapterTareas2.addTareaItem(aux.get(i));
+                }
+            }else if(entro){
+                Tareas tarAux = aux.get(i);
+                tarAux.setHeaderTitle("Próximas semanas");
+                customAdapterTareas2.addSectionHeaderItem(tarAux);
+                entro = false;
+            }else{
+                customAdapterTareas2.addTareaItem(aux.get(i));
+            }
+
+        }
+
+        expandableListView2.setAdapter(customAdapterTareas2);
     }
 }

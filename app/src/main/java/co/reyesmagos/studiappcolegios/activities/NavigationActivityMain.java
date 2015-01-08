@@ -45,8 +45,6 @@ public class NavigationActivityMain extends Activity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
-
-
     }
 
     @Override
@@ -59,12 +57,15 @@ public class NavigationActivityMain extends Activity
                 fragment = new NotificacionesFragmentActivity();
                 break;
             case 1:
-                fragment = new TareasFragmentActivity();
+                fragment = new NotificacionesFragmentActivity();
                 break;
             case 2:
-                fragment = new NotasFragmentActivity();
+                fragment = new TareasFragmentActivity();
                 break;
             case 3:
+                fragment = new NotasFragmentActivity();
+                break;
+            case 4:
                 break;
         }
         fragmentManager.beginTransaction()

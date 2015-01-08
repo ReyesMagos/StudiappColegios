@@ -117,6 +117,8 @@ public class NavigationDrawerFragment extends Fragment {
         navDrawItems.add(new NavigationDrawItem(mNavTitles[4],navMenuIcons.getResourceId(1,-1), true, "5"));
         navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(2,-1), true, "3"));
 
+
+
         NavigationDrawListAdapter adapter = new NavigationDrawListAdapter(inflater.getContext(), navDrawItems);
 
        /* mDrawerListView.setAdapter(new ArrayAdapter<String>(
@@ -131,6 +133,7 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section5),
                 }));*/
         mDrawerListView.setAdapter(adapter);
+        mDrawerListView.addHeaderView(getActivity().getLayoutInflater().inflate(R.layout.navigation_header,null));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }

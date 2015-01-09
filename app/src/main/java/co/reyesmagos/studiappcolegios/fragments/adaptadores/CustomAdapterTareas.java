@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.TreeSet;
 
 import co.reyesmagos.studiappcolegios.R;
 import co.reyesmagos.studiappcolegios.dominio.adaptadores.entities.Tareas;
+import co.reyesmagos.studiappcolegios.fragments.TareasFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.adaptadores.util.TareaDetail;
 import co.reyesmagos.studiappcolegios.fragments.adaptadores.util.TareaHeader;
 
@@ -29,6 +31,7 @@ public class CustomAdapterTareas extends BaseExpandableListAdapter {
     private Context context;
     private List<Tareas> tareasList = new ArrayList<Tareas>();
     private TreeSet<Integer> sectionHeader = new TreeSet<Integer>();
+    private boolean checked = false;
 
 
 
@@ -53,6 +56,19 @@ public class CustomAdapterTareas extends BaseExpandableListAdapter {
         tareasList.add(tarea);
         sectionHeader.add(tareasList.size() - 1);
         notifyDataSetChanged();
+    }
+
+    public void removeTareaItem(final int id){
+        tareasList.remove(id);
+        notifyDataSetChanged();
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
     }
 
     @Override
@@ -160,6 +176,16 @@ public class CustomAdapterTareas extends BaseExpandableListAdapter {
 
                 tareaHeader.getHomeworkNameCheckBox().setText(tareas.getName());
                 tareaHeader.getMateriaTxt().setText(tareas.getMateria());
+
+                final TareaHeader finalTareaHeader = tareaHeader;
+                tareaHeader.getHomeworkNameCheckBox().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        //Toast.makeText(context,"Me cheqeuaron", Toast.LENGTH_LONG).show();
+                        setChecked(finalTareaHeader.getHomeworkNameCheckBox().isChecked());
+                    }
+                });
+
                 break;
             case TYPE_SEPARATOR:
                 tareaHeader.getMateriaTxt().setText(tareas.getHeaderTitle());

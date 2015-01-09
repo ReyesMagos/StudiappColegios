@@ -5,6 +5,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">YO</string>
 
+    <!-- Parse resources-->
+    <string name="application_id">rvZdCGk31GUthNdMaSOQwFQ84vG0RmmLUVHGMJ39</string>
+    <string name="client_key"></string>
+
     <!-- Login Activity -->
     <string name="user_name">Usuario</string>
     <string name="password_text">Contraseña</string>
@@ -65,6 +69,12 @@
     <string name="nota_final_label">Nota Final</string>
     <string name="nota_label">Nota</string>
 
+    <!--Opciones Activity-->
+    <string-array name="tipo_notificacion">
+        <item>Vibrar</item>
+        <item>Vibrar y sonar</item>
+        <item>Sonar</item>
+    </string-array>
 
 
 </resources>

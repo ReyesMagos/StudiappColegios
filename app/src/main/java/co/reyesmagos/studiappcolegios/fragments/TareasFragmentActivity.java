@@ -3,6 +3,7 @@ package co.reyesmagos.studiappcolegios.fragments;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -36,10 +38,12 @@ public class TareasFragmentActivity extends Fragment {
     private MenuItem mItem = null;
     CustomAdapterTareas customAdapterTareas2;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.tareas_activity, container, false);
+        customAdapterTareas2 = new CustomAdapterTareas(rootView.getContext());
         setHasOptionsMenu(true);
         initComponents();
         return rootView;
@@ -48,9 +52,10 @@ public class TareasFragmentActivity extends Fragment {
 
     public void initComponents() {
         expandableListView2 = (ExpandableListView)rootView.findViewById(R.id.expandableListView2);
-
+        
         expandableListView2.setIndicatorBounds(expandableListView2.getRight() - 60, expandableListView2.getWidth() - 8);
         customAdapterTareas2 = new CustomAdapterTareas(rootView.getContext());
+
 
         boolean entro = true;
         for (int i = 0; i < TareasFactory.getInstance().size(); i++) {
@@ -98,6 +103,22 @@ public class TareasFragmentActivity extends Fragment {
             }
         });
 
+    }
+
+    public ExpandableListView getListView() {
+        return expandableListView2;
+    }
+
+    public void setListView(ExpandableListView listView) {
+        this.expandableListView2 = listView;
+    }
+
+    public CustomAdapterTareas getCustomAdapterTareas2() {
+        return customAdapterTareas2;
+    }
+
+    public void setCustomAdapterTareas2(CustomAdapterTareas customAdapterTareas2) {
+        this.customAdapterTareas2 = customAdapterTareas2;
     }
 
     @Override
@@ -186,4 +207,6 @@ public class TareasFragmentActivity extends Fragment {
 
         expandableListView2.setAdapter(customAdapterTareas2);
     }
+
+
 }

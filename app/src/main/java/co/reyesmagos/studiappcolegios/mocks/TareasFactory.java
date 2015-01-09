@@ -24,7 +24,7 @@ public class TareasFactory {
         Tareas tarea = new Tareas();
         tarea.setName("Tarea de matematicas");
         tarea.setDescription("Realizar el capitulo 4 del libro");
-        date = new Long("1420666111000");
+        date = new Long("1420779600000");
         tarea.setDate(new Date(date));
         tarea.setMateria("Matemáticas");
         //tarea.setHeaderTitle("1");

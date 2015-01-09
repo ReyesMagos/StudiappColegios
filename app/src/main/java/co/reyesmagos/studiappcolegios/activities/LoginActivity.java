@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.parse.Parse;
+
 import co.reyesmagos.studiappcolegios.R;
 
 
@@ -19,6 +21,10 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this, getResources().getString(R.string.application_id), getResources().getString(R.string.client_key));
+
+
     }
 
     public void initComponents() {
@@ -45,7 +51,7 @@ public class LoginActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClick(View view){
+    public void onClick(View view) {
         startActivity(new Intent(this, NavigationActivityMain.class));
     }
 }

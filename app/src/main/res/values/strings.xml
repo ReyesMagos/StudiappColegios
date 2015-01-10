@@ -7,7 +7,7 @@
 
     <!-- Parse resources-->
     <string name="application_id">rvZdCGk31GUthNdMaSOQwFQ84vG0RmmLUVHGMJ39</string>
-    <string name="client_key"></string>
+    <string name="client_key">yfyI6M22GCwWfG8qjF2jVlsEZj8IgI8ZIhCPATo9</string>
 
     <!-- Login Activity -->
     <string name="user_name">Usuario</string>
@@ -32,6 +32,7 @@
         <item>Mensajes</item>
         <item>Configuración</item>
         <item>Ayuda</item>
+        <item>Cerrar sesión</item>
     </array>
     <array name="nav_drawer_icons">
         <item>@drawable/task</item>
@@ -76,5 +77,10 @@
         <item>Sonar</item>
     </string-array>
 
+    <!-- Registro Activity-->
+    <array name="rol_array">
+        <item>Padre</item>
+        <item>Profesor</item>
+    </array>
 
 </resources>

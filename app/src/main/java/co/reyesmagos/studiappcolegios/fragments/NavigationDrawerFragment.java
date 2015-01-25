@@ -111,11 +111,12 @@ public class NavigationDrawerFragment extends Fragment {
         ArrayList<NavigationDrawItem> navDrawItems = new ArrayList<NavigationDrawItem>();
 
         navDrawItems.add(new NavigationDrawItem(mNavTitles[0],navMenuIcons.getResourceId(0,-1)));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[1],navMenuIcons.getResourceId(0,-1)));
+        navDrawItems.add(new NavigationDrawItem(mNavTitles[1],navMenuIcons.getResourceId(0,-1), true, "3"));
         navDrawItems.add(new NavigationDrawItem(mNavTitles[2],navMenuIcons.getResourceId(0,-1)));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[3],navMenuIcons.getResourceId(1,-1)));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[4],navMenuIcons.getResourceId(1,-1), true, "5"));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(2,-1), true, "3"));
+        navDrawItems.add(new NavigationDrawItem(mNavTitles[3],navMenuIcons.getResourceId(1,-1), true, "5"));
+        navDrawItems.add(new NavigationDrawItem(mNavTitles[4],navMenuIcons.getResourceId(1,-1)));
+        navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(2,-1)));
+        navDrawItems.add(new NavigationDrawItem(mNavTitles[6],navMenuIcons.getResourceId(2, -1)));
 
         NavigationDrawListAdapter adapter = new NavigationDrawListAdapter(inflater.getContext(), navDrawItems);
 
@@ -131,6 +132,7 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section5),
                 }));*/
         mDrawerListView.setAdapter(adapter);
+        mDrawerListView.addHeaderView(getActivity().getLayoutInflater().inflate(R.layout.navigation_header,null));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }

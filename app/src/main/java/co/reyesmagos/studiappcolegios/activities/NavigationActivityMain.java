@@ -2,16 +2,23 @@ package co.reyesmagos.studiappcolegios.activities;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.parse.ParseUser;
 
 import co.reyesmagos.studiappcolegios.R;
+import co.reyesmagos.studiappcolegios.controladores.LoginController;
+import co.reyesmagos.studiappcolegios.fragments.ConfigurationFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.NavigationDrawerFragment;
 import co.reyesmagos.studiappcolegios.fragments.NotasFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.NotificacionesFragmentActivity;
@@ -45,8 +52,6 @@ public class NavigationActivityMain extends Activity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
-
-
     }
 
     @Override
@@ -59,13 +64,27 @@ public class NavigationActivityMain extends Activity
                 fragment = new NotificacionesFragmentActivity();
                 break;
             case 1:
-                fragment = new TareasFragmentActivity();
+                fragment = new NotificacionesFragmentActivity();
                 break;
             case 2:
-                fragment = new NotasFragmentActivity();
+                fragment = new TareasFragmentActivity();
                 break;
             case 3:
+                fragment = new NotasFragmentActivity();
                 break;
+            case 4:
+                break;
+            case 5:
+                fragment = new ConfigurationFragmentActivity();
+                break;
+            case 6:
+                break;
+            case 7:
+                //fragment = new NotificacionesFragmentActivity();
+                LoginController loginController = new LoginController(this);
+                loginController.logoutUser();
+                return;
+
         }
         fragmentManager.beginTransaction()
                 .replace(R.id.container, fragment).commit();

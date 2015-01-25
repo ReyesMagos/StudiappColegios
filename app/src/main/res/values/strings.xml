@@ -3,7 +3,11 @@
 
     <string name="app_name">AplicacionColegios</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">YO</string>
+
+    <!-- Parse resources-->
+    <string name="application_id">rvZdCGk31GUthNdMaSOQwFQ84vG0RmmLUVHGMJ39</string>
+    <string name="client_key">yfyI6M22GCwWfG8qjF2jVlsEZj8IgI8ZIhCPATo9</string>
 
     <!-- Login Activity -->
     <string name="user_name">Usuario</string>
@@ -28,6 +32,7 @@
         <item>Mensajes</item>
         <item>Configuración</item>
         <item>Ayuda</item>
+        <item>Cerrar sesión</item>
     </array>
     <array name="nav_drawer_icons">
         <item>@drawable/task</item>
@@ -37,7 +42,18 @@
 
     <string name="desc_list_item_icon">Item Icon</string>
 
+
+    <!--TareasFragment-->
+    <array name="spinner_items">
+        <item>Todos</item>
+        <item>Matematicas</item>
+        <item>Castellano</item>
+        <item>Artistica</item>
+    </array>
+
+
     <!-- Grid Layout -->
+
     <string name="espanol_label">Español</string>
     <string name="matematicas_label">Matematicas</string>
     <string name="artistica_label">Artistica</string>
@@ -54,5 +70,17 @@
     <string name="nota_final_label">Nota Final</string>
     <string name="nota_label">Nota</string>
 
+    <!--Opciones Activity-->
+    <string-array name="tipo_notificacion">
+        <item>Vibrar</item>
+        <item>Vibrar y sonar</item>
+        <item>Sonar</item>
+    </string-array>
+
+    <!-- Registro Activity-->
+    <array name="rol_array">
+        <item>Padre</item>
+        <item>Profesor</item>
+    </array>
 
 </resources>

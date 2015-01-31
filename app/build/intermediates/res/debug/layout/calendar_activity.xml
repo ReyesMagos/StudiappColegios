@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/calendarView"
+            android:firstDayOfWeek="1"
+            android:focusedMonthDateColor="@android:color/holo_red_dark"
+            android:selectedWeekBackgroundColor="@android:color/holo_blue_dark"
+            android:showWeekNumber="false"
+            android:shownWeekCount="5"
+            android:unfocusedMonthDateColor="@android:color/holo_green_dark"
+            android:weekNumberColor="@android:color/background_light"
+            android:weekSeparatorLineColor="@android:color/darker_gray"/>
+    </LinearLayout>
+</LinearLayout><!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/layout/calendar_activity.xml -->

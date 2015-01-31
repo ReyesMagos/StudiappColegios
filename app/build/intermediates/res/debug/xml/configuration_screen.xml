@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="notificacion_opcion"
+        android:title="Notificación"
+        android:summary="Seleccione si desea que le lleguen notificaciones"/>
+
+    <RingtonePreference
+        android:showDefault="true"
+        android:key="Tono de Notificacion"
+        android:title="Tono de Notificación"
+        android:summary="Seleccione el tono para las notificaciones"
+        android:ringtoneType="ringtone|notification|all"/>
+
+    <ListPreference
+        android:key="tipo_ringtone"
+        android:title="Tipo de Notificación"
+        android:summary="Seleccione el tipo de alerta"
+        android:dialogTitle="Seleccione"
+        android:entries="@array/tipo_notificacion"
+        android:entryValues="@array/tipo_notificacion"/>
+</PreferenceScreen><!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/xml/configuration_screen.xml -->

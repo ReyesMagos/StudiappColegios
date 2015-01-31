@@ -34,6 +34,17 @@
         <item>Ayuda</item>
         <item>Cerrar sesión</item>
     </array>
+
+    <array name="nav_drawer_titles_teachers">
+        <item>Inicio</item>
+        <item>Grupos</item>
+        <item>Horario</item>
+        <item>Calendario</item>
+        <item>Tareas</item>
+        <item>Mensajes</item>
+        <item>Cerrar Sesión</item>
+    </array>
+
     <array name="nav_drawer_icons">
         <item>@drawable/task</item>
         <item>@drawable/grades</item>

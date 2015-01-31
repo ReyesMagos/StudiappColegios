@@ -24,7 +24,7 @@ public class TareasFactory {
         Tareas tarea = new Tareas();
         tarea.setName("Tarea de matematicas");
         tarea.setDescription("Realizar el capitulo 4 del libro");
-        date = new Long("1420779600000");
+        date = new Long("1421557200000");
         tarea.setDate(new Date(date));
         tarea.setMateria("Matemáticas");
         //tarea.setHeaderTitle("1");
@@ -54,7 +54,7 @@ public class TareasFactory {
         tarea = new Tareas();
         tarea.setName("Lectura");
         tarea.setDescription("Realizar resumen del texto de la pág 45");
-        date = new Long("1421184511000");
+        date = new Long("1421557200000");
         tarea.setDate(new Date(date));
         tarea.setMateria("Castellano");
         tarea.setHeaderTitle("4");

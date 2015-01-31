@@ -12,17 +12,18 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.parse.ParseUser;
 
 import co.reyesmagos.studiappcolegios.R;
 import co.reyesmagos.studiappcolegios.controladores.LoginController;
+import co.reyesmagos.studiappcolegios.fragments.CalendarFragment;
 import co.reyesmagos.studiappcolegios.fragments.ConfigurationFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.NavigationDrawerFragment;
 import co.reyesmagos.studiappcolegios.fragments.NotasFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.NotificacionesFragmentActivity;
-import co.reyesmagos.studiappcolegios.fragments.TareasFragmentActivity;
+import co.reyesmagos.studiappcolegios.fragments.teachers.GroupsActivityFragment;
+import co.reyesmagos.studiappcolegios.fragments.teachers.HomeTeacherActivity;
 
 
 public class NavigationActivityMain extends Activity
@@ -59,33 +60,87 @@ public class NavigationActivityMain extends Activity
         // update the main content by replacing co.reyesmagos.aplicacioncolegios.fragments
         FragmentManager fragmentManager = getFragmentManager();
         Fragment fragment = null;
-        switch (position) {
-            case 0:
-                fragment = new NotificacionesFragmentActivity();
-                break;
-            case 1:
-                fragment = new NotificacionesFragmentActivity();
-                break;
-            case 2:
-                fragment = new TareasFragmentActivity();
-                break;
-            case 3:
-                fragment = new NotasFragmentActivity();
-                break;
-            case 4:
-                break;
-            case 5:
-                fragment = new ConfigurationFragmentActivity();
-                break;
-            case 6:
-                break;
-            case 7:
-                //fragment = new NotificacionesFragmentActivity();
-                LoginController loginController = new LoginController(this);
-                loginController.logoutUser();
-                return;
 
+        if (ParseUser.getCurrentUser().get("rol").equals("Padre")) {
+            switch (position) {
+                case 0:
+                    fragment = new NotificacionesFragmentActivity();
+                    break;
+                case 1:
+                    fragment = new NotificacionesFragmentActivity();
+                    break;
+                case 2:
+                    //fragment = new TareasFragmentActivity();
+                    fragment = new CalendarFragment();
+                    break;
+                case 3:
+                    fragment = new NotasFragmentActivity();
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    fragment = new ConfigurationFragmentActivity();
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    //fragment = new NotificacionesFragmentActivity();
+                    LoginController loginController = new LoginController(this);
+                    loginController.logoutUser();
+                    return;
+
+            }
+        } else {
+            switch (position) {
+                case 0:
+                    fragment = new HomeTeacherActivity();
+                    break;
+                case 1:
+                    fragment = new HomeTeacherActivity();
+                    break;
+                case 2:
+                    fragment = new GroupsActivityFragment();
+                    break;
+                case 3:
+                    fragment = new NotasFragmentActivity();
+                    break;
+                case 4:
+                    fragment = new CalendarFragment();
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    //LoginController loginController = new LoginController(this);
+                    //loginController.logoutUser();
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(this).setMessage("¿Desea cerrar Sesión?")
+                            .setTitle("Alerta").setCancelable(true).setPositiveButton("Salir", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                    ParseUser.logOut();
+                                    ParseUser parseUser = ParseUser.getCurrentUser();
+                                    NavigationActivityMain.this.finish();
+                                    //System.exit(0);
+                                }
+                            }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+
+                    AlertDialog alertDialog2 = alertDialog.create();
+
+                    alertDialog2.show();
+                    return;
+
+            }
         }
+
         fragmentManager.beginTransaction()
                 .replace(R.id.container, fragment).commit();
 

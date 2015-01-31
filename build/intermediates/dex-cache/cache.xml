@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Alexis-PC\AppData\Local\Android\android-studio1\sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="C:\Users\Alexis-PC\Documents\GitHub\StudiappColegios\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-9224ebc71b43b1c1aef86bb73a20502e67ab760c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Alexis-PC\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.1.4\129874135e6081269ace2312092031558865de12\bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="C:\Users\Alexis-PC\Documents\GitHub\StudiappColegios\app\build\intermediates\pre-dexed\debug\bolts-android-1.1.4-0f6f795015e63da00b0fbbda7b518254a1339500.jar" />
+    </item>
+    <item
+        jar="C:\Users\Alexis-PC\Documents\GitHub\StudiappColegios\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="C:\Users\Alexis-PC\Documents\GitHub\StudiappColegios\app\build\intermediates\pre-dexed\debug\classes-9738a5a2ef4d266eb85427b08579a4686b8fe6b0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Alexis-PC\Documents\GitHub\StudiappColegios\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="C:\Users\Alexis-PC\Documents\GitHub\StudiappColegios\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-180d9427d46c4078d29691b45b9581c75d6d9daf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Alexis-PC\Documents\GitHub\StudiappColegios\app\libs\Parse-1.8.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="61cf79e2775b882ac0ea32d60ea2dbbf6f245cea">
+        <dex dex="C:\Users\Alexis-PC\Documents\GitHub\StudiappColegios\app\build\intermediates\pre-dexed\debug\Parse-1.8.0-d73180b1ca934383b101dd4cdf2caf0966f0d067.jar" />
+    </item>
+
+</items>

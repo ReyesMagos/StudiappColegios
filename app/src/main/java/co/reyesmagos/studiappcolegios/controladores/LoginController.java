@@ -2,7 +2,6 @@ package co.reyesmagos.studiappcolegios.controladores;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.widget.Toast;
@@ -21,10 +20,20 @@ import co.reyesmagos.studiappcolegios.services.util.Utilities;
 public class LoginController {
 
     private Activity context;
+    boolean exit;
 
     public LoginController(Activity context) {
         super();
         this.context = context;
+        this.exit = false;
+    }
+
+    public boolean isExit() {
+        return exit;
+    }
+
+    public void setExit(boolean exit) {
+        this.exit = exit;
     }
 
     public void loginUser(User user) {
@@ -61,10 +70,13 @@ public class LoginController {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
+
                         ParseUser.logOut();
                         ParseUser parseUser = ParseUser.getCurrentUser();
-
-                        System.exit(1);
+                        if (parseUser == null) {
+                            System.exit(0);
+                        }
 
                     }
                 }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -78,5 +90,6 @@ public class LoginController {
         AlertDialog alertDialog2 = alertDialog.create();
 
         alertDialog2.show();
+
     }
 }

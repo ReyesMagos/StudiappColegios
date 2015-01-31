@@ -22,6 +22,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.parse.ParseUser;
+
 import java.util.ArrayList;
 
 import co.reyesmagos.studiappcolegios.R;
@@ -105,33 +107,47 @@ public class NavigationDrawerFragment extends Fragment {
             }
         });
 
-        String[] mNavTitles = getResources().getStringArray(R.array.nav_drawer_titles);
-        TypedArray navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
+        //inicializando lo necesario para el navigationDrawer
+        String[] mNavTitles; //titulos del navigation
+        NavigationDrawListAdapter adapter = null; //adaptador para la lista del navigation
+        TypedArray navMenuIcons = null; //iconos del navigation
+        ArrayList<NavigationDrawItem>navDrawItems = null;
 
-        ArrayList<NavigationDrawItem> navDrawItems = new ArrayList<NavigationDrawItem>();
+        //Preguntamos si es un padre o un profesor para inicializar los items del navigationDrawer
+        if(ParseUser.getCurrentUser().getString("rol").equalsIgnoreCase("Padre")){
+            mNavTitles = getResources().getStringArray(R.array.nav_drawer_titles);
+            navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
 
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[0],navMenuIcons.getResourceId(0,-1)));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[1],navMenuIcons.getResourceId(0,-1), true, "3"));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[2],navMenuIcons.getResourceId(0,-1)));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[3],navMenuIcons.getResourceId(1,-1), true, "5"));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[4],navMenuIcons.getResourceId(1,-1)));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(2,-1)));
-        navDrawItems.add(new NavigationDrawItem(mNavTitles[6],navMenuIcons.getResourceId(2, -1)));
+            navDrawItems = new ArrayList<NavigationDrawItem>();
 
-        NavigationDrawListAdapter adapter = new NavigationDrawListAdapter(inflater.getContext(), navDrawItems);
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[0],navMenuIcons.getResourceId(0,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[1],navMenuIcons.getResourceId(0,-1), true, "3"));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[2],navMenuIcons.getResourceId(0,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[3],navMenuIcons.getResourceId(1,-1), true, "5"));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[4],navMenuIcons.getResourceId(1,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(2,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[6],navMenuIcons.getResourceId(2, -1)));
 
-       /* mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                new String[]{
-                        getString(R.string.title_section1),
-                        getString(R.string.title_section2),
-                        getString(R.string.title_section3),
-                        getString(R.string.title_section4),
-                        getString(R.string.title_section5),
-                }));*/
+            adapter = new NavigationDrawListAdapter(inflater.getContext(), navDrawItems);
+        }else{
+            mNavTitles = getResources().getStringArray(R.array.nav_drawer_titles_teachers);
+            navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
+
+            navDrawItems = new ArrayList<NavigationDrawItem>();
+
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[0],navMenuIcons.getResourceId(0,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[1],navMenuIcons.getResourceId(0,-1), true, "3"));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[2],navMenuIcons.getResourceId(0,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[3],navMenuIcons.getResourceId(1,-1), true, "5"));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[4],navMenuIcons.getResourceId(1,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(1,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[6],navMenuIcons.getResourceId(1,-1)));
+
+            adapter = new NavigationDrawListAdapter(inflater.getContext(), navDrawItems);
+        }
+
         mDrawerListView.setAdapter(adapter);
+        //Se le agrega en encabezado al navigation
         mDrawerListView.addHeaderView(getActivity().getLayoutInflater().inflate(R.layout.navigation_header,null));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;

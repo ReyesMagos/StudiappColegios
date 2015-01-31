@@ -70,9 +70,20 @@ public class CustomAdapterNotasMateria extends BaseAdapter {
 
         Nota nota = getItem(position);
         viewHolder.txtMotivo.setText(nota.getMotivo());
-        viewHolder.txtPorcentaje.setText(new DecimalFormat("##.##").format((nota.getPorcentaje()*100))+"%");
-        if(nota.getNota()!=-1)
-        viewHolder.txtNota.setText(Double.toString(nota.getNota()));
+        if(nota.getNota()!=-1){
+            double notis= nota.getNota();
+            if(notis>0 && notis<1)
+                viewHolder.txtNota.setText("D");
+           else if(notis>=1 && notis <3)
+                viewHolder.txtNota.setText("I");
+            else if(notis>=3 && notis <4)
+                viewHolder.txtNota.setText("A");
+            else if(notis>=4 && notis <4.5)
+                viewHolder.txtNota.setText("S");
+            else if(notis>=4.5 && notis <=5)
+                viewHolder.txtNota.setText("E");
+        }
+
         else
             viewHolder.txtNota.setText("N/A");
 

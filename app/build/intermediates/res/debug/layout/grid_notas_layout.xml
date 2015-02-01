@@ -6,6 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:numColumns="2"
+        android:layout_marginTop="10dp"
         android:id="@+id/grid_notas" />
 </LinearLayout>
-<!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/layout/grid_notas_layout.xml -->
+<!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/layout/grid_notas_layout.xml -->

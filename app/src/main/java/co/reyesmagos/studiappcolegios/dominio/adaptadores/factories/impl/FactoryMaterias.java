@@ -53,19 +53,17 @@ public class FactoryMaterias implements IFactoryMaterias {
 
         List<Nota> listaNotas = new ArrayList<Nota>();
         Nota nota = new Nota();
-
-
-        nota.setNota(4.2);
+        nota.setNota(0.8);
         nota.setMotivo(context.getResources().getString(R.string.tarea1_label));
         listaNotas.add(nota);
 
         nota = new Nota();
-        nota.setNota(2.2);
+        nota.setNota(0.4);
         nota.setMotivo(context.getResources().getString(R.string.tarea2_label));
         listaNotas.add(nota);
 
         nota = new Nota();
-        nota.setNota(3.2);
+        nota.setNota(0.2);
         nota.setMotivo(context.getResources().getString(R.string.tarea3_label));
         listaNotas.add(nota);
 
@@ -86,7 +84,7 @@ public class FactoryMaterias implements IFactoryMaterias {
 
         nota = new Nota();
 
-        nota.setNota(2.2);
+        nota.setNota(3.2);
         nota.setMotivo(context.getResources().getString(R.string.tarea1_label));
         listaNotas.add(nota);
 
@@ -101,7 +99,7 @@ public class FactoryMaterias implements IFactoryMaterias {
         listaNotas.add(nota);
 
         nota = new Nota();
-        nota.setNota(3.8);
+        nota.setNota(3.7);
         nota.setMotivo(context.getResources().getString(R.string.evaluacion1_label));
         listaNotas.add(nota);
 
@@ -117,7 +115,7 @@ public class FactoryMaterias implements IFactoryMaterias {
         listaNotas = new ArrayList<Nota>();
 
         nota = new Nota();
-        nota.setNota(1.2);
+        nota.setNota(3.2);
         nota.setMotivo(context.getResources().getString(R.string.tarea1_label));
         listaNotas.add(nota);
 
@@ -127,7 +125,7 @@ public class FactoryMaterias implements IFactoryMaterias {
         listaNotas.add(nota);
 
         nota = new Nota();
-        nota.setNota(2.0);
+        nota.setNota(3.1);
         nota.setMotivo(context.getResources().getString(R.string.tarea3_label));
         listaNotas.add(nota);
 

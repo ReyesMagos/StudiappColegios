@@ -35,9 +35,22 @@ public class MateriaActivity extends Activity {
                 getApplicationContext(), FactoryMaterias.getInstance().getMateriaAMostrar().
                 getListaNotas());
         lvNotas.setAdapter(customAdapterNotasMateria);
-        Double notaF=FactoryMaterias.getInstance().getMateriaAMostrar().
+        Double notis=FactoryMaterias.getInstance().getMateriaAMostrar().
                 getNotaFinal().getNota();
-        txtNotaFinal.setText(new DecimalFormat("##.##").format(notaF));
+
+        if(notis>0 && notis<1)
+            txtNotaFinal.setText("D");
+        else if(notis>=1 && notis <3)
+            txtNotaFinal.setText("I");
+        else if(notis>=3 && notis <3.8)
+            txtNotaFinal.setText("A");
+        else if(notis>=3.8 && notis <4.5)
+            txtNotaFinal.setText("S");
+        else if(notis>=4.5 && notis <=5)
+            txtNotaFinal.setText("E");
+
+
+        //txtNotaFinal.setText(new DecimalFormat("##.##").format(notaF));
     }
 
 

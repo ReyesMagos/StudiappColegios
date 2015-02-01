@@ -146,10 +146,13 @@ public class NavigationDrawerFragment extends Fragment {
             adapter = new NavigationDrawListAdapter(inflater.getContext(), navDrawItems);
         }
 
-        mDrawerListView.setAdapter(adapter);
         //Se le agrega en encabezado al navigation
         mDrawerListView.addHeaderView(getActivity().getLayoutInflater().inflate(R.layout.navigation_header,null));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+        mDrawerListView.setAdapter(adapter);
+
+
+
         return mDrawerListView;
     }
 

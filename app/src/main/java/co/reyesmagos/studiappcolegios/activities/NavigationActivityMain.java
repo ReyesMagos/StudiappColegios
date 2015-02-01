@@ -22,6 +22,7 @@ import co.reyesmagos.studiappcolegios.fragments.ConfigurationFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.NavigationDrawerFragment;
 import co.reyesmagos.studiappcolegios.fragments.NotasFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.NotificacionesFragmentActivity;
+import co.reyesmagos.studiappcolegios.fragments.TareasFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.teachers.GroupsActivityFragment;
 import co.reyesmagos.studiappcolegios.fragments.teachers.HomeTeacherActivity;
 
@@ -70,8 +71,8 @@ public class NavigationActivityMain extends Activity
                     fragment = new NotificacionesFragmentActivity();
                     break;
                 case 2:
-                    //fragment = new TareasFragmentActivity();
-                    fragment = new CalendarFragment();
+                    fragment = new TareasFragmentActivity();
+                    //fragment = new CalendarFragment();
                     break;
                 case 3:
                     fragment = new NotasFragmentActivity();
@@ -123,7 +124,6 @@ public class NavigationActivityMain extends Activity
                                     ParseUser.logOut();
                                     ParseUser parseUser = ParseUser.getCurrentUser();
                                     NavigationActivityMain.this.finish();
-                                    //System.exit(0);
                                 }
                             }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
 

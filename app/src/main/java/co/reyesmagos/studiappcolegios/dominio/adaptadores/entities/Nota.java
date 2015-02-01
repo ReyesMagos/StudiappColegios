@@ -7,7 +7,6 @@ public class Nota {
 
 
     private double nota;
-    private double porcentaje;
     private String motivo;
 
     public double getNota() {
@@ -18,13 +17,6 @@ public class Nota {
         this.nota = nota;
     }
 
-    public double getPorcentaje() {
-        return porcentaje;
-    }
-
-    public void setPorcentaje(double porcentaje) {
-        this.porcentaje = porcentaje;
-    }
 
     public String getMotivo() {
         return motivo;

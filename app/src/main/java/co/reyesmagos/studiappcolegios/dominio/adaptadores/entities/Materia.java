@@ -19,13 +19,13 @@ public class Materia {
         double nota = 0;
         for (Nota n : this.listaNotas) {
             if (n.getNota() != -1) {
-                nota += (n.getNota() * n.getPorcentaje());
-                i += n.getPorcentaje();
+                nota += (n.getNota());
+                i++;
+
             }
         }
         Nota n1= new Nota();
         n1.setNota(nota/i);
-        n1.setPorcentaje(i);
         this.notaFinal=n1;
     }
 

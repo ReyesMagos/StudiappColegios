@@ -19,4 +19,4 @@
         android:dialogTitle="Seleccione"
         android:entries="@array/tipo_notificacion"
         android:entryValues="@array/tipo_notificacion"/>
-</PreferenceScreen><!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/xml/configuration_screen.xml -->
+</PreferenceScreen><!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/xml/configuration_screen.xml -->

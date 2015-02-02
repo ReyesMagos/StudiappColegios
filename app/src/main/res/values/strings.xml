@@ -5,7 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">YO</string>
 
-    <!-- Parse resources-->
+    <!-- Parse resources -->
     <string name="application_id">rvZdCGk31GUthNdMaSOQwFQ84vG0RmmLUVHGMJ39</string>
     <string name="client_key">yfyI6M22GCwWfG8qjF2jVlsEZj8IgI8ZIhCPATo9</string>
 
@@ -34,7 +34,6 @@
         <item>Ayuda</item>
         <item>Cerrar sesión</item>
     </array>
-
     <array name="nav_drawer_titles_teachers">
         <item>Inicio</item>
         <item>Grupos</item>
@@ -44,7 +43,6 @@
         <item>Mensajes</item>
         <item>Cerrar Sesión</item>
     </array>
-
     <array name="nav_drawer_icons">
         <item>@drawable/task</item>
         <item>@drawable/grades</item>
@@ -53,15 +51,13 @@
 
     <string name="desc_list_item_icon">Item Icon</string>
 
-
-    <!--TareasFragment-->
+    <!-- TareasFragment -->
     <array name="spinner_items">
         <item>Todos</item>
         <item>Matematicas</item>
         <item>Castellano</item>
         <item>Artistica</item>
     </array>
-
 
     <!-- Grid Layout -->
 
@@ -77,21 +73,24 @@
     <string name="evaluacion1_label">Evaluacion 1</string>
     <string name="evaluacion2_label">Evaluacion 2</string>
 
-    <!--Materias Activity-->
+    <!-- Materias Activity -->
     <string name="nota_final_label">Nota Final</string>
     <string name="nota_label">Nota</string>
 
-    <!--Opciones Activity-->
+    <!-- Opciones Activity -->
     <string-array name="tipo_notificacion">
         <item>Vibrar</item>
         <item>Vibrar y sonar</item>
         <item>Sonar</item>
     </string-array>
 
-    <!-- Registro Activity-->
+    <!-- Registro Activity -->
     <array name="rol_array">
         <item>Padre</item>
         <item>Profesor</item>
     </array>
+
+    <string name="title_activity_home_works">HomeWorksActivity</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>

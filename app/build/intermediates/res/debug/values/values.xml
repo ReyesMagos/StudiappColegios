@@ -79,6 +79,8 @@
     <string name="tarea3_label">Tarea 3</string>
     <string name="tarea4_label">Tarea 4</string>
     <string name="title_activity_activity_navigation_main">ActivityNavigationMain</string>
+    <string name="title_activity_home_works">HomeWorksActivity</string>
+    <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_materia">MateriaActivity</string>
     <string name="title_activity_navigation_activity_main">NavigationActivityMain</string>
     <string name="title_section1">Tareas</string>

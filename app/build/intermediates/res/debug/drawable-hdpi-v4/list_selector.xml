@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/list_item_bg_pressed" android:state_pressed="true"/>
     <item android:drawable="@drawable/list_item_bg_pressed" android:state_activated="true"/>
 
-</selector><!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/drawable-hdpi/list_selector.xml -->
+</selector><!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/drawable-hdpi/list_selector.xml -->

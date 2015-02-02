@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <array name="nav_drawer_icons">
-        <item>@drawable/task</item>
-        <item>@drawable/grades</item>
-        <item>@drawable/messages</item>
+        <item>@drawable/home</item>
+        <item>@drawable/homework_icon</item>
+        <item>@drawable/grade_icon</item>
+        <item>@drawable/message_icon</item>
+        <item>@drawable/config_icon</item>
+        <item>@drawable/calendar_icon</item>
+
+
     </array>
     <array name="nav_drawer_titles">
         <item>Inicio</item>
@@ -40,24 +45,24 @@
         <item>Vibrar y sonar</item>
         <item>Sonar</item>
     </string-array>
-    <!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="counter_text_bg">#626262</color>
-    <color name="counter_text_color">#c5c4c4</color>
-    <color name="list_background">#626262</color>
-    <color name="list_background_pressed">#c5c4c4</color>
+    <color name="counter_text_bg">#c5c4c4</color>
+    <color name="counter_text_color">#626262</color>
+    <color name="list_background">#c5c4c4</color>
+    <color name="list_background_pressed">#626262</color>
     <color name="list_divider">#272727</color>
-    <color name="list_item_title">#fff</color>
-    <!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/values/dimens.xml -->
+    <color name="list_item_title">#272727</color>
+    <!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="navigation_drawer_width">240dp</dimen>
-    <!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_example">Example action</string>
     <string name="action_settings">YO</string>
-    <string name="app_name">AplicacionColegios</string>
+    <string name="app_name">Studiapp</string>
     <string name="application_id">rvZdCGk31GUthNdMaSOQwFQ84vG0RmmLUVHGMJ39</string>
     <string name="artistica_label">Artistica</string>
     <string name="client_key">yfyI6M22GCwWfG8qjF2jVlsEZj8IgI8ZIhCPATo9</string>
@@ -89,7 +94,7 @@
     <string name="title_section4">Configuración</string>
     <string name="title_section5">Ayuda</string>
     <string name="user_name">Usuario</string>
-    <!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light">
         <!-- Customize your theme here. -->

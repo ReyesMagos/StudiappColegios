@@ -41,6 +41,14 @@
             android:name="co.reyesmagos.studiappcolegios.activities.SignUpActivity"
             android:label="Registro" >
         </activity>
+        <activity
+            android:name="co.reyesmagos.studiappcolegios.activities.teachers.HomeWorksFragment"
+            android:label="@string/title_activity_home_works" >
+        </activity>
+        <activity
+            android:name="co.reyesmagos.studiappcolegios.activities.teachers.AddHomeworkActitivy"
+            android:label="@string/title_activity_main" >
+        </activity>
     </application>
 
 </manifest>

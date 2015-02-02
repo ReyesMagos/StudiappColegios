@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import com.parse.ParseUser;
 
 import co.reyesmagos.studiappcolegios.R;
+import co.reyesmagos.studiappcolegios.activities.teachers.HomeWorksFragment;
 import co.reyesmagos.studiappcolegios.controladores.LoginController;
 import co.reyesmagos.studiappcolegios.fragments.CalendarFragment;
 import co.reyesmagos.studiappcolegios.fragments.ConfigurationFragmentActivity;
@@ -103,12 +104,13 @@ public class NavigationActivityMain extends Activity
                     fragment = new GroupsActivityFragment();
                     break;
                 case 3:
-                    fragment = new NotasFragmentActivity();
+                    fragment = new HomeWorksFragment();
                     break;
                 case 4:
                     fragment = new CalendarFragment();
                     break;
                 case 5:
+                    fragment = new HomeWorksFragment();
                     break;
                 case 6:
                     break;

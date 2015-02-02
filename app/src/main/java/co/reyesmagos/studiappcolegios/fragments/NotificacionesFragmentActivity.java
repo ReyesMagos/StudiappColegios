@@ -9,9 +9,12 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import co.reyesmagos.studiappcolegios.R;
+import co.reyesmagos.studiappcolegios.dominio.adaptadores.entities.Tareas;
 import co.reyesmagos.studiappcolegios.fragments.adaptadores.CustomAdapterNotificaciones;
+import co.reyesmagos.studiappcolegios.mocks.TareasFactory;
 
 /**
  * Created by Alexis-PC on 27/11/2014.
@@ -33,10 +36,16 @@ public class NotificacionesFragmentActivity extends Fragment {
     public void initComponents() {
         this.listView = (ListView) rootView.findViewById(R.id.listView);
 
-        List<String> novedades = new ArrayList<String>();
-        novedades.add("Tareas");
+        List<Object> novedades = new ArrayList<Object>();
+        List<Tareas> tareasList = TareasFactory.getInstance();
 
-        CustomAdapterNotificaciones customAdapterNotificaciones = new CustomAdapterNotificaciones(rootView.getContext(), novedades);
+        for(int i = 0; i < tareasList.size(); i++){
+            novedades.add(tareasList.get(i));
+        }
+
+        CustomAdapterNotificaciones customAdapterNotificaciones = new CustomAdapterNotificaciones(rootView.getContext(),
+                novedades);
+
 
         listView.setAdapter(customAdapterNotificaciones);
     }

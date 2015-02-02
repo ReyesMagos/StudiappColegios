@@ -23,7 +23,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="5dp">
 
             <TextView
@@ -33,13 +33,15 @@
                 android:textStyle="bold|italic"
                 android:text="Medium Text"
                 android:id="@+id/textView"
-                android:gravity="center" />
+                android:gravity="center"
+                android:layout_marginTop="15dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
-                android:id="@+id/textView2" />
+                android:id="@+id/textView2"
+                android:layout_marginTop="8dp"/>
 
         </LinearLayout>
 
@@ -48,7 +50,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageView2"
             android:src="@drawable/ic_launcher"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 </LinearLayout>

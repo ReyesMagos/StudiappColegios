@@ -10,8 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Objects;
 
 import co.reyesmagos.studiappcolegios.R;
+import co.reyesmagos.studiappcolegios.dominio.adaptadores.entities.Tareas;
 
 /**
  * Created by Alexis-PC on 09/12/2014.
@@ -19,9 +21,9 @@ import co.reyesmagos.studiappcolegios.R;
 public class CustomAdapterNotificaciones extends BaseAdapter {
 
     private Context context;
-    private List<String> listNotificaciones;
+    private List<Object> listNotificaciones;
 
-    public CustomAdapterNotificaciones(Context context, List<String> notificacionesList) {
+    public CustomAdapterNotificaciones(Context context, List<Object> notificacionesList) {
         super();
         this.context = context;
         this.listNotificaciones = notificacionesList;
@@ -63,10 +65,14 @@ public class CustomAdapterNotificaciones extends BaseAdapter {
             viewHolder = (ViewHolder)convertView.getTag();
         }
 
-        viewHolder.imgIcon1.setImageResource(R.drawable.ic_launcher);
-        viewHolder.imgIcon2.setImageResource(R.drawable.ic_launcher);
-        viewHolder.txtTitle.setText("Nombre Tarea");
-        viewHolder.txtText.setText("Descripción de la tarea");
+        if(getItem(position) instanceof Tareas){
+            Tareas tareas = (Tareas)getItem(position);
+            viewHolder.imgIcon1.setImageResource(R.drawable.homework_icon);
+            viewHolder.imgIcon2.setImageResource(R.drawable.task);
+            viewHolder.txtTitle.setText(tareas.getName());
+            viewHolder.txtText.setText(tareas.getDescription());
+        }
+
 
         return convertView;
     }

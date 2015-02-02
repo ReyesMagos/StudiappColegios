@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <ExpandableListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/expandableListView"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ExpandableListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/expandableListView2"/>
+    </LinearLayout>
+</LinearLayout><!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/layout-large/tareas_activity.xml -->

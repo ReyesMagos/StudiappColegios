@@ -3,7 +3,8 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <FrameLayout
         android:id="@+id/content_frame"
@@ -24,4 +25,4 @@
 
 
 
-<!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/layout/navigation_activity_main.xml -->
+<!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/layout/navigation_activity_main.xml -->

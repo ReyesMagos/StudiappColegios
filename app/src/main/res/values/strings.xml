@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">AplicacionColegios</string>
+    <string name="app_name">Studiapp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">YO</string>
 
@@ -44,9 +44,14 @@
         <item>Cerrar Sesión</item>
     </array>
     <array name="nav_drawer_icons">
-        <item>@drawable/task</item>
-        <item>@drawable/grades</item>
-        <item>@drawable/messages</item>
+        <item>@drawable/home</item>
+        <item>@drawable/homework_icon</item>
+        <item>@drawable/grade_icon</item>
+        <item>@drawable/message_icon</item>
+        <item>@drawable/config_icon</item>
+        <item>@drawable/calendar_icon</item>
+
+
     </array>
 
     <string name="desc_list_item_icon">Item Icon</string>

@@ -5,6 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
     tools:context="co.reyesmagos.studiappcolegios.activities.NavigationActivityMain">
 
     <!-- As the main content view, the view below consumes the entire
@@ -29,4 +30,4 @@
         tools:layout="@layout/fragment_navigation_drawer" />
 
 </android.support.v4.widget.DrawerLayout>
-<!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/layout/activity_navigation_main.xml -->
+<!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/layout/activity_navigation_main.xml -->

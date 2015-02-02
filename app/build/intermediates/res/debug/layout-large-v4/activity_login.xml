@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@drawable/loginpng"
+              android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp">
+
+        <EditText
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_name"
+            android:layout_gravity="center"
+            android:id="@+id/editText_user_name"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_gravity="center"
+            android:hint="@string/password_text"
+            android:id="@+id/editText_password"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/login_boton_png"
+            android:layout_gravity="center"
+            android:onClick="onClick"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_register"
+            android:src="@drawable/ic_launcher"
+            android:layout_weight="1"
+            android:onClick="onStartRegisterActivity"/>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/layout-large/activity_login.xml -->

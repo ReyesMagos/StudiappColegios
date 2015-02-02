@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/user_name"
+            android:layout_marginLeft="10dp"
             android:layout_gravity="center"
             android:id="@+id/editText_user_name"
             android:layout_weight="1"/>
@@ -25,6 +26,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:layout_gravity="center"
@@ -51,9 +53,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_register"
-            android:src="@drawable/ic_launcher"
+            android:src="@drawable/btnsing"
             android:layout_weight="1"
             android:onClick="onStartRegisterActivity"/>
     </LinearLayout>
 
-</LinearLayout><!-- From: file:/Users/oscargallon/Documents/Developer/Android/Projects/StudiappColegios/app/src/main/res/layout/activity_login.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Alexis-PC/Documents/GitHub/StudiappColegios/app/src/main/res/layout/activity_login.xml -->

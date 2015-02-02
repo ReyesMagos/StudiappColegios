@@ -24,6 +24,7 @@ import co.reyesmagos.studiappcolegios.fragments.NavigationDrawerFragment;
 import co.reyesmagos.studiappcolegios.fragments.NotasFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.NotificacionesFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.TareasFragmentActivity;
+import co.reyesmagos.studiappcolegios.fragments.adaptadores.teacher.HorarioFragment;
 import co.reyesmagos.studiappcolegios.fragments.teachers.GroupsActivityFragment;
 import co.reyesmagos.studiappcolegios.fragments.teachers.HomeTeacherActivity;
 
@@ -87,8 +88,30 @@ public class NavigationActivityMain extends Activity
                     break;
                 case 7:
                     //fragment = new NotificacionesFragmentActivity();
-                    LoginController loginController = new LoginController(this);
-                    loginController.logoutUser();
+                    //LoginController loginController = new LoginController(this);
+                    //loginController.logoutUser();
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(this).setMessage("¿Desea cerrar Sesión?")
+                            .setTitle("Alerta").setCancelable(true).setPositiveButton("Salir", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                    ParseUser.logOut();
+                                    ParseUser parseUser = ParseUser.getCurrentUser();
+                                    NavigationActivityMain.this.finish();
+                                    //System.exit(0);
+                                }
+                            }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+
+                    AlertDialog alertDialog2 = alertDialog.create();
+
+                    alertDialog2.show();
                     return;
 
             }
@@ -104,12 +127,13 @@ public class NavigationActivityMain extends Activity
                     fragment = new GroupsActivityFragment();
                     break;
                 case 3:
-                    fragment = new HomeWorksFragment();
+                    fragment = new HorarioFragment();
                     break;
                 case 4:
                     fragment = new CalendarFragment();
                     break;
                 case 5:
+
                     fragment = new HomeWorksFragment();
                     break;
                 case 6:

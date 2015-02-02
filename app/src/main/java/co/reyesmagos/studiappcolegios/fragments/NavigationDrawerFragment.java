@@ -121,12 +121,12 @@ public class NavigationDrawerFragment extends Fragment {
             navDrawItems = new ArrayList<NavigationDrawItem>();
 
             navDrawItems.add(new NavigationDrawItem(mNavTitles[0],navMenuIcons.getResourceId(0,-1)));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[1],navMenuIcons.getResourceId(0,-1), true, "3"));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[2],navMenuIcons.getResourceId(0,-1)));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[3],navMenuIcons.getResourceId(1,-1), true, "5"));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[4],navMenuIcons.getResourceId(1,-1)));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(2,-1)));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[6],navMenuIcons.getResourceId(2, -1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[1],navMenuIcons.getResourceId(1,-1), true, "3"));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[2],navMenuIcons.getResourceId(2,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[3],navMenuIcons.getResourceId(3,-1), true, "5"));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[4],navMenuIcons.getResourceId(4,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(5,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[6],navMenuIcons.getResourceId(5, -1)));
 
             adapter = new NavigationDrawListAdapter(inflater.getContext(), navDrawItems);
         }else{
@@ -136,11 +136,11 @@ public class NavigationDrawerFragment extends Fragment {
             navDrawItems = new ArrayList<NavigationDrawItem>();
 
             navDrawItems.add(new NavigationDrawItem(mNavTitles[0],navMenuIcons.getResourceId(0,-1)));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[1],navMenuIcons.getResourceId(0,-1), true, "3"));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[2],navMenuIcons.getResourceId(0,-1)));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[3],navMenuIcons.getResourceId(1,-1), true, "5"));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[1],navMenuIcons.getResourceId(2,-1), true, "3"));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[2],navMenuIcons.getResourceId(1,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[3],navMenuIcons.getResourceId(5,-1), true, "5"));
             navDrawItems.add(new NavigationDrawItem(mNavTitles[4],navMenuIcons.getResourceId(1,-1)));
-            navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(1,-1)));
+            navDrawItems.add(new NavigationDrawItem(mNavTitles[5],navMenuIcons.getResourceId(3,-1)));
             navDrawItems.add(new NavigationDrawItem(mNavTitles[6],navMenuIcons.getResourceId(1,-1)));
 
             adapter = new NavigationDrawListAdapter(inflater.getContext(), navDrawItems);

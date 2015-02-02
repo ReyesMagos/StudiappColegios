@@ -24,11 +24,11 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <ImageView
-            android:layout_width="394dp"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView_add_group"
-            android:src="@drawable/ic_launcher"
-            android:layout_gravity="center"/>
+            android:text="Agregar"
+            android:layout_gravity="center"
+            android:id="@+id/button2"/>
     </LinearLayout>
 </LinearLayout>

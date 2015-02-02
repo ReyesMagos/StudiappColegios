@@ -74,9 +74,8 @@ public class LoginController {
 
                         ParseUser.logOut();
                         ParseUser parseUser = ParseUser.getCurrentUser();
-                        if (parseUser == null) {
-                            System.exit(0);
-                        }
+
+
 
                     }
                 }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {

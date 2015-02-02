@@ -24,6 +24,7 @@ import co.reyesmagos.studiappcolegios.fragments.NavigationDrawerFragment;
 import co.reyesmagos.studiappcolegios.fragments.NotasFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.NotificacionesFragmentActivity;
 import co.reyesmagos.studiappcolegios.fragments.TareasFragmentActivity;
+import co.reyesmagos.studiappcolegios.fragments.adaptadores.teacher.HorarioFragment;
 import co.reyesmagos.studiappcolegios.fragments.teachers.GroupsActivityFragment;
 import co.reyesmagos.studiappcolegios.fragments.teachers.HomeTeacherActivity;
 
@@ -126,12 +127,13 @@ public class NavigationActivityMain extends Activity
                     fragment = new GroupsActivityFragment();
                     break;
                 case 3:
-                    fragment = new HomeWorksFragment();
+                    fragment = new HorarioFragment();
                     break;
                 case 4:
                     fragment = new CalendarFragment();
                     break;
                 case 5:
+
                     fragment = new HomeWorksFragment();
                     break;
                 case 6:

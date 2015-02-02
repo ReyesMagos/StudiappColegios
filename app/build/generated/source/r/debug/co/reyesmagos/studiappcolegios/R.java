@@ -32,6 +32,7 @@ public final class R {
         public static final int navigation_drawer_width=0x7f070002;
     }
     public static final class drawable {
+<<<<<<< HEAD
         public static final int arrow=0x7f020000;
         public static final int artistica=0x7f020001;
         public static final int background_navigation_header=0x7f020002;
@@ -58,6 +59,30 @@ public final class R {
         public static final int messages=0x7f020017;
         public static final int task=0x7f020018;
         public static final int user=0x7f020019;
+=======
+        public static final int agenda=0x7f020000;
+        public static final int arrow=0x7f020001;
+        public static final int artistica=0x7f020002;
+        public static final int backgroud=0x7f020003;
+        public static final int background_navigation_header=0x7f020004;
+        public static final int btnsing=0x7f020005;
+        public static final int counter_bg=0x7f020006;
+        public static final int drawer_shadow=0x7f020007;
+        public static final int espanol=0x7f020008;
+        public static final int grades=0x7f020009;
+        public static final int ic_drawer=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int ingles=0x7f02000c;
+        public static final int list_item_bg_normal=0x7f02000d;
+        public static final int list_item_bg_pressed=0x7f02000e;
+        public static final int list_selector=0x7f02000f;
+        public static final int login_boton_png=0x7f020010;
+        public static final int loginpng=0x7f020011;
+        public static final int mate=0x7f020012;
+        public static final int messages=0x7f020013;
+        public static final int task=0x7f020014;
+        public static final int user=0x7f020015;
+>>>>>>> 92e1561d7746f02929754604051030eecb72c8fd
     }
     public static final class id {
         public static final int action_example=0x7f0b0046;
@@ -141,29 +166,30 @@ public final class R {
         public static final int activity_materia=0x7f030003;
         public static final int activity_my=0x7f030004;
         public static final int activity_navigation_main=0x7f030005;
-        public static final int calendar_activity=0x7f030006;
-        public static final int create_homework=0x7f030007;
-        public static final int custom_add_homework_layout=0x7f030008;
-        public static final int drawer_list_item=0x7f030009;
-        public static final int fragment_navigation_activity_main=0x7f03000a;
-        public static final int fragment_navigation_drawer=0x7f03000b;
-        public static final int grid_notas_layout=0x7f03000c;
-        public static final int navigation_activity_main=0x7f03000d;
-        public static final int navigation_header=0x7f03000e;
-        public static final int nota_custom_grid=0x7f03000f;
-        public static final int notas_fragment_activity=0x7f030010;
-        public static final int notas_materia_custom_adapter=0x7f030011;
-        public static final int notificaciones_custom_listview=0x7f030012;
-        public static final int novedades_fragment_activity=0x7f030013;
-        public static final int register_group=0x7f030014;
-        public static final int separator_tareas_list=0x7f030015;
-        public static final int separator_tareas_list_child=0x7f030016;
-        public static final int sign_up_activity=0x7f030017;
-        public static final int tareas_activity=0x7f030018;
-        public static final int tareas_list_customized=0x7f030019;
-        public static final int tareas_list_header=0x7f03001a;
-        public static final int teacher_group_list_fragment=0x7f03001b;
-        public static final int teacher_today_fragment=0x7f03001c;
+        public static final int agenda=0x7f030006;
+        public static final int calendar_activity=0x7f030007;
+        public static final int create_homework=0x7f030008;
+        public static final int custom_add_homework_layout=0x7f030009;
+        public static final int drawer_list_item=0x7f03000a;
+        public static final int fragment_navigation_activity_main=0x7f03000b;
+        public static final int fragment_navigation_drawer=0x7f03000c;
+        public static final int grid_notas_layout=0x7f03000d;
+        public static final int navigation_activity_main=0x7f03000e;
+        public static final int navigation_header=0x7f03000f;
+        public static final int nota_custom_grid=0x7f030010;
+        public static final int notas_fragment_activity=0x7f030011;
+        public static final int notas_materia_custom_adapter=0x7f030012;
+        public static final int notificaciones_custom_listview=0x7f030013;
+        public static final int novedades_fragment_activity=0x7f030014;
+        public static final int register_group=0x7f030015;
+        public static final int separator_tareas_list=0x7f030016;
+        public static final int separator_tareas_list_child=0x7f030017;
+        public static final int sign_up_activity=0x7f030018;
+        public static final int tareas_activity=0x7f030019;
+        public static final int tareas_list_customized=0x7f03001a;
+        public static final int tareas_list_header=0x7f03001b;
+        public static final int teacher_group_list_fragment=0x7f03001c;
+        public static final int teacher_today_fragment=0x7f03001d;
     }
     public static final class menu {
         public static final int activity_navigation_main=0x7f0a0000;
